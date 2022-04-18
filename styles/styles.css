@@ -15,13 +15,16 @@
     --footer: #000;
     --text-description: #9C9696;
 }
-
+body{
+    margin: 20px;
+}
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 40px 40px 0 40px;
-    
+    margin: 20px;
+    margin-bottom: 40px;
     
 }
 #navbar-container{
@@ -61,8 +64,7 @@ header{
 #main-container{
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
-    padding: 40px;
+    gap: 55px;
 }
 #description-container{
     display: flex;
@@ -99,9 +101,8 @@ header{
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--main-background);
-    padding:40px;
-    
-    
+    padding: 20px;
+    width: 65vw;
 }
 #imagem-ampliada{
     background-color: var(--main-background);
@@ -109,8 +110,14 @@ header{
 #galery{
     background-color:var(--main-background);
     display: grid;
-    gap: 20px;
-    grid-template-columns: 270px 250px 270px;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    grid-template-columns: 20vw 20vw 20vw;
+}
+#galery img{
+    width: 20vw;
+    height: 30vh;
 }
 .image:hover{ 
     opacity: 60%;
@@ -119,21 +126,23 @@ header{
 }
 footer{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    gap: 12vw;
     align-items: center;
-    margin: 0 40px 0 60px;
     position: relative;
-    bottom: 40px;
 }
 #footer-navbar-container{
     display: flex;
-    justify-content: center;
-    gap: 3rem;
-    
+    justify-content: space-around;
+    gap: 1rem;
+}
+video{
+    width: 15vw;
+    height: 25vh;
 }
 .footer-navbar-item{
     text-decoration: none;
-    color:var(--text)
+    color:var(--text);
 }
 .footer-navbar-item:hover{
     opacity: 60%;
@@ -142,8 +151,8 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 250px;
-    height: 166px;
+    width: 15vw;
+    height: 20vh;
     border: none;
     background-color: var(--text);
     margin-bottom: 4px;
@@ -161,4 +170,161 @@ footer{
 #footer-navbar-button img{
     background-color: inherit;
     padding-left: 3px;
+}
+@media (max-width: 1000px) {
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    #search{
+        background-color: #E5E5E5;
+        border:solid 2px black;
+    }
+   
+    #lupa{
+        display: none;
+    }
+    #navbar-container{
+        flex-direction: row;
+        align-items: center;
+    }
+    #main-container{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    #description-container{
+        align-items: center;
+        padding:0 30px;
+        margin: 0 30px;
+        margin-bottom: 50px;
+    }
+    #title-description{
+        font-size: 3rem;
+        width: 500px;
+    }
+    #phrase-description{
+        display: none;
+    }
+    #price-description{
+        color: #9C9696;
+        font-size: 2rem;
+        width: 300px;
+        text-align: center;
+    }
+    #galery-container{
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        display: flex;
+        
+        border-radius: 1rem;
+    }
+    
+    #galery{
+        
+        grid-template-columns: 100px 100px 100px;
+        align-items: center;
+        justify-content: center;
+        gap:20px;
+    }
+    #galery img{
+        width: 100px;
+        height: 70px;
+        border-radius: 0.5rem;
+    }
+    footer{
+        flex-direction: column;
+        gap: 50px;
+    }
+    video{
+        width: 500px;
+    }
+    #footer-navbar-container{
+        gap:30px;
+    }
+    #footer-navbar-button{
+        width: 500px;
+        height: 332px;
+    }
+}
+
+
+@media (max-width: 700px) {
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    #search{
+        background-color: #E5E5E5;
+        border:solid 2px black;
+    }
+   
+    #lupa{
+        display: none;
+    }
+    #navbar-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    #main-container{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    #description-container{
+        align-items: center;
+        padding:0 30px;
+        margin: 0 30px;
+        margin-bottom: 50px;
+    }
+    #title-description{
+        font-size: 2.5rem;
+        width: 300px;
+    }
+    #phrase-description{
+        display: none;
+    }
+    #price-description{
+        color: #9C9696;
+        font-size: 2rem;
+        width: 300px;
+        text-align: center;
+    }
+    #galery-container{
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        display: flex;
+        border-radius: 1rem;
+    }
+    #galery{
+        
+        grid-template-columns: 70px 70px 70px;
+        align-items: center;
+        justify-content: center;
+    }
+    #galery img{
+        width: 70px;
+        height: 50px;
+        border-radius: 0.5rem;
+    }
+    footer{
+        flex-direction: column;
+        gap: 50px;
+    }
+    video{
+        width: 330px;
+    }
+    #footer-navbar-container{
+        gap:10px;
+    }
+    #footer-navbar-button{
+        width: 330px;
+        height: 219px;
+    }
 }
